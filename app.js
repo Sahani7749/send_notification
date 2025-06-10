@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 });
 
 // POST /send-notification
-app.post("/", async (req, res) => {
+app.post("/send-notification-1", async (req, res) => {
   const { title, body, fcm_token, topic, send_type } = req.body;
 
   const message = {
