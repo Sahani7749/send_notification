@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 const STATIC_BEARER = "bNzxay2Pvqh831iEcDviOfdv8hv4H2BY";
 
 // Load your Firebase Admin SDK JSON
-const serviceAccount = require("./firebase-key.json");
+const serviceAccount = JSON.parse(process.env.FIREBASE_KEY);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
